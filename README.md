@@ -62,9 +62,11 @@ Download [models](https://pan.baidu.com/s/1IIaX2CDG-rH2gLjAwhV2TA) (Password: wu
 
 ### Test
 
+xxx  
 
 ### Train
-```
+
+xxx   
 
 ## 📊 Experimental Results <a name="7"></a> 
 
@@ -104,14 +106,10 @@ Download [models](https://pan.baidu.com/s/1IIaX2CDG-rH2gLjAwhV2TA) (Password: wu
 ## ✉️ Statement <a name="9"></a> 
 This project is for research purpose only, please contact us for the licence of commercial use. For any other questions please contact [lyy1030@mail.ustc.edu.cn](lyy1030@mail.ustc.edu.cn) or [wzhai056@mail.ustc.edu.cn](wzhai056@mail.ustc.edu.cn).
 
-
 ## 🔍 Citation <a name="10"></a> 
 
-```
 @inproceedings{Li2022Location,
   title={Location-Free Camouflage Generation Network},
   author={Yangyang Li and Wei Zhai and Yang Cao and Zheng-jun Zha},
   year={2022}
 }
-```
-
