@@ -108,8 +108,10 @@ This project is for research purpose only, please contact us for the licence of 
 
 ## 🔍 Citation <a name="10"></a> 
 
+```
 @inproceedings{Li2022Location,
   title={Location-Free Camouflage Generation Network},
   author={Yangyang Li and Wei Zhai and Yang Cao and Zheng-jun Zha},
   year={2022}
 }
+```
