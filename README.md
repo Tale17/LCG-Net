@@ -58,7 +58,17 @@ structure similarity, and feeds the result to the decoder. Norm represents the n
 
 ## ✏️ Usage <a name="6"></a> 
 
-xxx
+```
+## Usage
+
+### Download models
+Download [models](https://pan.baidu.com/s/1IIaX2CDG-rH2gLjAwhV2TA) (Password: wuj2) and put `decoder.pth`, `PSF.pth`,`vgg_normalised.pth` under `models/`.
+
+### Test
+
+
+### Train
+```
 
 ## 📊 Experimental Results <a name="7"></a> 
 
@@ -108,5 +118,4 @@ This project is for research purpose only, please contact us for the licence of 
   year={2022}
 }
 ```
-
 
