@@ -70,8 +70,8 @@ parser.add_argument('--Top', type=int, default=200)
 parser.add_argument('--Bottom', type=int, default=800)
 
 parser.add_argument('--vgg', type=str, default='models/vgg_normalised.pth')
-parser.add_argument('--decoder', type=str, default='experiments/decoder_iter_80000.pth')
-parser.add_argument('--PSF', type=str,         default='experiments/PSF_iter_80000.pth')
+parser.add_argument('--decoder', type=str, default='models/decoder_iter_80000.pth')
+parser.add_argument('--PSF', type=str,         default='models/PSF_iter_80000.pth')
 
 # Additional options
 parser.add_argument('--fore_size', type=int, default=0,

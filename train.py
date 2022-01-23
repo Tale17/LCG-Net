@@ -81,16 +81,16 @@ def adjust_learning_rate(optimizer, iteration_count):
 
 parser = argparse.ArgumentParser()
 # Basic options
-parser.add_argument('--front_dir', type=str, default='/home/erica/COCO2017Val/image/',
-                    help='Directory path to a batch of front images')
-parser.add_argument('--mask_dir', type=str, default='/home/erica/COCO2017Val/mask/',
+parser.add_argument('--fore_dir', type=str, required=True,
+                    help='Directory path to a batch of fore images')
+parser.add_argument('--mask_dir', type=str, required=True,
                     help='Directory path to a batch of mask images')
-parser.add_argument('--back_dir', type=str, default='/home/erica/CamVideo/landspace/',
+parser.add_argument('--back_dir', type=str, required=True,
                     help='Directory path to a batch of back images')
 parser.add_argument('--vgg', type=str, default='models/vgg_normalised.pth')
 
 # training options
-parser.add_argument('--save_dir', default='./Experiments',
+parser.add_argument('--save_dir', default='./experiments',
                     help='Directory to save the model')
 parser.add_argument('--log_dir', default='./logs',
                     help='Directory to save the log')
@@ -125,17 +125,17 @@ network.train()
 network.to(device)
 
 re_size = 128
-front_tf = train_transform(re_size,re_size) #resize crop
+fore_tf = train_transform(re_size,re_size) #resize crop
 back_tf = train_transform(2*re_size,re_size)
 mask_tf = mask_transform(re_size,re_size)
 
-front_dataset = FlatFolderDataset(args.front_dir, front_tf)
+fore_dataset = FlatFolderDataset(args.fore_dir, fore_tf)
 back_dataset = FlatFolderDataset(args.back_dir, back_tf)
 mask_dataset = MaskFolderDataset(args.mask_dir, mask_tf)
 
-front_iter = iter(data.DataLoader(
-    front_dataset, batch_size=args.batch_size,
-    sampler=InfiniteSamplerWrapper(front_dataset),
+fore_iter = iter(data.DataLoader(
+    fore_dataset, batch_size=args.batch_size,
+    sampler=InfiniteSamplerWrapper(fore_dataset),
     num_workers=args.n_threads))
 
 back_iter = iter(data.DataLoader(
@@ -153,11 +153,11 @@ optimizer = torch.optim.Adam(network.decoder.parameters(), lr=args.lr)
 for i in tqdm(range(args.max_iter)):
     adjust_learning_rate(optimizer, iteration_count=i)
 
-    front_images = next(front_iter).to(device)
+    fore_images = next(fore_iter).to(device)
     back_images = next(back_iter).to(device)
     mask_images = next(mask_iter).to(device)
 
-    loss_im, loss_bp, loss_rem, loss_tv= network(front_images, back_images, mask_images)
+    loss_im, loss_bp, loss_rem, loss_tv= network(fore_images, back_images, mask_images)
     loss_im = args.im_weight * loss_im
     loss_bp = args.bp_weight * loss_bp
     loss_rem = args.rem_weight * loss_rem
