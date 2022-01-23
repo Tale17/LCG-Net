@@ -7,12 +7,13 @@ Pytorch implementation of ''Location-Free Camouflage Generation Network''.
  2. [💡 Abstract](#2)
  3. [✨ Motivation](#3)
  4. [📖 Method](#4)
- 6. [📃 Requirements](#5)
- 7. [✏️ Usage](#6)
- 8. [📊 Experimental Results](#7)
- 9. [🍎 Potential Applications](#8)
- 10. [✉️ Statement](#9)
- 11. [🔍 Citation](#10)
+ 5. [📃 Requirements](#5)
+ 6. [📂 Download](#6)
+ 7. [✏️ Usage](#7)
+ 8. [📊 Experimental Results](#8)
+ 9. [🍎 Potential Applications](#9)
+ 10. [✉️ Statement](#10)
+ 11. [🔍 Citation](#11)
 
 ## 📎 Paper Link <a name="1"></a> 
 > Location-Free Camouflage Generation Network ([link](https://arxiv.org/pdf/xxxx.xxxxx.pdf))
@@ -56,11 +57,18 @@ structure similarity, and feeds the result to the decoder. Norm represents the n
   - pytorch 
   - opencv 
 
-## ✏️ Usage <a name="6"></a> 
+## 📂 Download <a name="6"></a>
+```
+bash models/download_models.sh
+```
+
+This command will download a pre-trained decoder as well as a modified VGG-19 network. The encoder used by our LCG-Net is the first few layers of VGG.
+
+## ✏️ Usage <a name="7"></a> 
 
 xxx
 
-## 📊 Experimental Results <a name="7"></a> 
+## 📊 Experimental Results <a name="8"></a> 
 
 
 <p align="center">
@@ -75,7 +83,7 @@ xxx
     </em>
 </p>
 
-## 🍎 Potential Applications <a name="8"></a>
+## 🍎 Potential Applications <a name="9"></a>
 
 <p align="center">
     <img src="./image/app1.png" width="750"/> <br />
@@ -95,11 +103,11 @@ xxx
     </em>
 </p>
 
-## ✉️ Statement <a name="9"></a> 
+## ✉️ Statement <a name="10"></a> 
 This project is for research purpose only, please contact us for the licence of commercial use. For any other questions please contact [lyy1030@mail.ustc.edu.cn](lyy1030@mail.ustc.edu.cn) or [wzhai056@mail.ustc.edu.cn](wzhai056@mail.ustc.edu.cn).
 
 
-## 🔍 Citation <a name="10"></a> 
+## 🔍 Citation <a name="11"></a> 
 
 ```
 @inproceedings{Li2022Location,
