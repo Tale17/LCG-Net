@@ -1,10 +1,10 @@
-#Zoom, pan, crop parameters used by 6 sets of examples in ”input_data”
+#Zoom, pan, crop parameters used by 6 sets of examples in ”input”
 
 #1
 example1 = dict(number = 1,
-fore_path = 'input_data/fore_images/1.png',
-mask_path = 'input_data/mask_images/1.png',
-back_path = 'input_data/background_images/1.jpg',
+fore_path = 'input/fore/1.png',
+mask_path = 'input/mask/1.png',
+back_path = 'input/back/1.jpg',
 # Zoom
 zoomSize = 1,
 # Pan
@@ -19,9 +19,9 @@ Bottom = 600+1,)
 
 #2
 example2 = dict(number = 2,
-fore_path = 'input_data/fore_images/2.jpg',
-mask_path = 'input_data/mask_images/2.png',
-back_path = 'input_data/background_images/2.jpg',
+fore_path = 'input/fore/2.jpg',
+mask_path = 'input/mask/2.png',
+back_path = 'input/back/2.jpg',
 # Zoom
 zoomSize = 1.5,
 # Pan
@@ -36,9 +36,9 @@ Bottom = 800+1)
 
 #3
 example3 = dict(number = 3,
-fore_path = 'input_data/fore_images/3.jpg',
-mask_path = 'input_data/mask_images/3.png',
-back_path = 'input_data/background_images/3.jpg',
+fore_path = 'input/fore/3.jpg',
+mask_path = 'input/mask/3.png',
+back_path = 'input/back/3.jpg',
 # Zoom
 zoomSize = 1,
 # Pan
@@ -53,9 +53,9 @@ Bottom = -1)
 
 #4
 example4 = dict(number = 4,
-fore_path = 'input_data/fore_images/4.jpg',
-mask_path = 'input_data/mask_images/4.png',
-back_path = 'input_data/background_images/4.jpg',
+fore_path = 'input/fore/4.jpg',
+mask_path = 'input/mask/4.png',
+back_path = 'input/back/4.jpg',
 # Zoom
 zoomSize = 0.5,
 # Pan
@@ -70,9 +70,9 @@ Bottom = 620+1)
 
 #5
 example5 = dict(number = 5,
-fore_path = 'input_data/fore_images/5.jpg',
-mask_path = 'input_data/mask_images/5.png',
-back_path = 'input_data/background_images/5.jpg',
+fore_path = 'input/fore/5.jpg',
+mask_path = 'input/mask/5.png',
+back_path = 'input/back/5.jpg',
 # Zoom
 zoomSize = 0.3,
 # Pan
@@ -87,9 +87,9 @@ Bottom = -1)
 
 #6
 example6 = dict(number = 6,
-fore_path = 'input_data/fore_images/6.png',
-mask_path = 'input_data/mask_images/6.png',
-back_path = 'input_data/background_images/6.jpg',
+fore_path = 'input/fore/6.png',
+mask_path = 'input/mask/6.png',
+back_path = 'input/back/6.jpg',
 # Zoom
 zoomSize = 0.7,
 # Pan

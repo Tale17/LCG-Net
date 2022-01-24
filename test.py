@@ -57,21 +57,21 @@ def position(fore, back):
 parser = argparse.ArgumentParser()
 parser.add_argument('--use_examples', type=int, default=2, help='Use the input and positional parameters we provide. None means input by the users.')
 # If input by users
-parser.add_argument('--fore', type=str, default='input_data/fore_images/2.jpg', help='Foreground image.')
-parser.add_argument('--mask', type=str, default='input_data/mask_images/2.png', help='Mask image.')
-parser.add_argument('--back', type=str, default='input_data/background_images/2.jpg', help='Background image.')
+parser.add_argument('--fore', type=str, default='input/fore/2.jpg', help='Foreground image.')
+parser.add_argument('--mask', type=str, default='input/mask/2.png', help='Mask image.')
+parser.add_argument('--back', type=str, default='input/back/2.jpg', help='Background image.')
 parser.add_argument('--zoomSize', type=int, default=1.5, help='Zoom size.')
 parser.add_argument('--Vertical', type=int, default=100, help='Move the camouflage region in the vertical direction, the larger the value, the lower the region.')
 parser.add_argument('--Horizontal', type=int, default=0, help='Move the camouflage region in the horizontal direction, the larger the value, the more right the region.')
 # Crop parameters
-parser.add_argument('--Left', type=int, default=550)
-parser.add_argument('--Right', type=int, default=1150)
-parser.add_argument('--Top', type=int, default=200)
-parser.add_argument('--Bottom', type=int, default=800)
+parser.add_argument('--Left', type=int, default=0)
+parser.add_argument('--Right', type=int, default=-1)
+parser.add_argument('--Top', type=int, default=0)
+parser.add_argument('--Bottom', type=int, default=-1)
 
 parser.add_argument('--vgg', type=str, default='models/vgg_normalised.pth')
-parser.add_argument('--decoder', type=str, default='models/decoder_iter_80000.pth')
-parser.add_argument('--PSF', type=str,         default='models/PSF_iter_80000.pth')
+parser.add_argument('--decoder', type=str, default='models/decoder.pth')
+parser.add_argument('--PSF', type=str, default='models/PSF.pth')
 
 # Additional options
 parser.add_argument('--fore_size', type=int, default=0,

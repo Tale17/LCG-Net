@@ -62,11 +62,39 @@ Download [models](https://pan.baidu.com/s/1IIaX2CDG-rH2gLjAwhV2TA) (Password: wu
 
 ### Test
 
-xxx  
+We provide six sets of foreground and background images for users to observe the effect of camouflage generation. Use `--use_examples` to choose which set you want to generate (from 1 to 6 ). 
+
+```
+python test.py --use_examples 1
+```
+
+The generated result can be found at `output/x_x.jpg`. "x" is the number of your choice.
+
+You can also generate camouflage images using foreground and background images of your own choice by `--fore`, `--mask` and `--back`. We need you to provide the mask image corresponding to the foreground object. The default camouflage region is the center of the background image.
+
+```
+python test.py --use_examples None --fore input/fore/2.jpg --mask input/mask/2.png --back input/back/2.jpg
+```
+
+Some other options for your own foreground an background images:
+
+- `--zoomSize`: Scale the foreground object by a factor of "zoomSize".
+- `--Vertical`: Shift the camouflage region down from the default position by "Vertical" pixels (can be negative but not beyond the image boundaries). 
+- `--Horizontal`: Shift the camouflage region right from the default position by "Horizontal" pixels (can be negative but not beyond the image boundaries). 
+- `--Top`: Crop the result, starting from the "Top" pixels in the vertical direction.
+- `--Bottom`: Crop the result, end at the "Bottom" pixels in the vertical direction.
+- `--Left`: Crop the result, starting from the "Left" pixels in the horizontal direction.
+- `--Right`: Crop the result, end at the "Right" pixels in the horizontal direction.
 
 ### Train
 
-xxx   
+Use `--fore_dir`, `--mask_dir` and `--back_dir` to provide respective directory  to the foreground, mask and background images. Each foreground image must have the same prefix as the corresponding mask image.
+
+```
+python train.py --fore_dir <fore_dir> --mask_dir <mask_dir> --back_dir <back_dir>
+```
+
+The foreground and background datasets we use are [MS-COCO](imags.cocodataset.org/zips/val2017.zip) with corresponding [annotation](imags.cocodataset.org/annotations/annotations_trainval2017.zip) and [Landscape](https://github.com/yuweiming70/Landscape-Dataset) (cull gray images) respectively, you can also try other datasets for training. 
 
 ## 📊 Experimental Results <a name="7"></a> 
 
