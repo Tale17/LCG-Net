@@ -100,13 +100,13 @@ The foreground and background datasets we use are [MS-COCO](imags.cocodataset.or
 
 
 <p align="center">
-    <img src="./image/exp1.png" width="750"/> <br />
+    <img src="./image/Ex1.png" width="750"/> <br />
     <em> 
     </em>
 </p>
 
 <p align="center">
-    <img src="./image/exp2.png" width="750"/> <br />
+    <img src="./image/Ex2.png" width="750"/> <br />
     <em> 
     </em>
 </p>
