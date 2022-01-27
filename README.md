@@ -124,6 +124,8 @@ The foreground and background datasets we use are [MS-COCO](imags.cocodataset.or
     </em>
 </p>
 
+**Camouflage Dataset.** Part (a) A standard example from ImageNet [55] and the camouflage example generated with it. We do not embed the foreground objects into the background images since these human visual artifacts have little impact on the deep neural network. Part (b) Concealed Object Detection (COD), the camouflage dataset can assist the training of COD. Part (c) Top: Transfering the style of elephant skin to the cat, Geirhos et al. [56] proves that traditional CNNs are strongly biased towards recognizing textures rather than shapes and classify the stylized result as “elephant”. Bottom: Introducing the camouflage dataset can force CNNs to avoid the features of short-cut and learn the essential features which have the discriminative ability, thereby reducing mean corruption error (mCE) on the corruption validation set.
+
 <p align="center">
     <img src="./image/app2.png" width="450"/> <br />
     <em> 
