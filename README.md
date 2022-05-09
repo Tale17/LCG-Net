@@ -1,4 +1,4 @@
-# Location-Free Camouflage Generation Network
+# Location-Free Camouflage Generation Network (T-MM)
 
 Pytorch implementation of ''Location-Free Camouflage Generation Network''. 
 
